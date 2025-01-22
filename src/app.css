@@ -42,14 +42,13 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
-
 main {
   display: block;
   margin: auto;
   box-sizing: border-box;
   background-color: transparent;
   line-height: 36px;
-  max-width: 1024px;
+  max-width: 960px;
 }
 
 /**

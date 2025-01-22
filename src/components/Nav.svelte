@@ -10,7 +10,8 @@
 
   let pages =[
     {name: 'About', url: 'about'},
-    {name: 'Workshops', url: 'workshops'}
+    {name: 'Workshops', url: 'workshops'},
+    {name: 'Template', url: 'template'}
 ]
 
   // const handleChange = ({ currentTarget }) => {
