@@ -46,6 +46,12 @@
             Placeholder text with formatting to include <b> bold</b> <em>italics</em> and new/visited link color. This section should also have formatting
             for ordered and unordered lists as well as hanging indents to support academic citations.
         </p>
+        <br/>
+        <p class="hanging-indent">
+            This is an example of a paragraph with a hanging indent. The first line is flush
+            with the margin, while subsequent lines are indented.
+        </p>
+        <br/>
         <ul>
             <li>
                 ABC
@@ -54,7 +60,7 @@
                 123
             </li>
         </ul>
-
+        <br/>
         <ol>
             <li>
                 ABC
@@ -70,5 +76,10 @@
     .content {
         max-width: 960px;
         margin: auto;
+    }
+
+    .hanging-indent {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
     }
 </style>
