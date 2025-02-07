@@ -11,7 +11,8 @@
   let pages =[
     {name: 'About', url: 'about'},
     {name: 'Workshops', url: 'workshops'},
-    {name: 'Template', url: 'template'}
+    {name: 'Template', url: 'template'},
+    {name: 'Author', url: 'author'}
 ]
 
   // const handleChange = ({ currentTarget }) => {
