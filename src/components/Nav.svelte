@@ -12,7 +12,8 @@
     {name: 'About', url: 'about'},
     {name: 'Workshops', url: 'workshops'},
     {name: 'Template', url: 'template'},
-    {name: 'Author', url: 'author'}
+    {name: 'Author', url: 'author'},
+    {name: 'Case study', url: 'casestudy'}
 ]
 
   // const handleChange = ({ currentTarget }) => {
