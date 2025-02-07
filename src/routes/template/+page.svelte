@@ -2,11 +2,11 @@
     let imageSrc = 'base-images/test-image-1.jpg'
 </script>
 <div class='content'>
-    <h1>
+    <h1 class='text-primary'>
         PRINCIPLE/ITEM TITLE
     </h1>
 
-    <p>Lorem ipsum si dolor est</p>
+    <p class='text-secondary'>Lorem ipsum si dolor est</p>
     <p>Lorem ipsum si dolor est</p>
 
     <h2>
