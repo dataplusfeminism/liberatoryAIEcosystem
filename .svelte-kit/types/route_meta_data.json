@@ -1,0 +1,21 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/about": [
+		"src/routes/+layout.js"
+	],
+	"/author": [
+		"src/routes/+layout.js"
+	],
+	"/casestudy": [
+		"src/routes/+layout.js"
+	],
+	"/template": [
+		"src/routes/+layout.js"
+	],
+	"/workshops": [
+		"src/routes/+layout.js"
+	]
+}
