@@ -80,6 +80,9 @@ function render(component, options = {}) {
     body: payload.out
   };
 }
+function stringify(value) {
+  return typeof value === "string" ? value : value == null ? "" : value + "";
+}
 function slot(payload, $$props, name, slot_props, fallback_fn) {
   var slot_fn = $$props.$$slots?.[name];
   if (slot_fn === true) {
@@ -112,6 +115,7 @@ export {
   ensure_array_like as e,
   bind_props as f,
   getContext as g,
+  stringify as h,
   push as p,
   render as r,
   setContext as s

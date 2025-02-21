@@ -30,5 +30,9 @@ export default {
     paths: {
       base: process.env.NODE_ENV === 'production' ? prodBase : devBase,
     },
+    prerender: {
+      entries: ['*'], // Ensure all pages are pre-rendered
+      handleHttpError: 'warn' // (Optional) Suppresses 404 errors instead of throwing
+    }
   },
 };

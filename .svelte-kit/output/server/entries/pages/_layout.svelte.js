@@ -1,4 +1,5 @@
 import { e as ensure_array_like, c as pop, p as push, d as slot, f as bind_props } from "../../chunks/index.js";
+import { b as base } from "../../chunks/paths.js";
 import { a as attr } from "../../chunks/attributes.js";
 import { e as escape_html } from "../../chunks/escaping.js";
 import "clsx";
@@ -14,7 +15,7 @@ function Nav($$payload) {
   $$payload.out += `<nav class="flex items-center svelte-11tyw0t"><div class="flex">Liberatory AI Ecosystem <a${attr("href", "/.")}><img src="/illustrations/logo.png" class="me-3 h-6 sm:h-9 logo" alt="Project Logo"></a></div> <div><ul class="nav-links svelte-11tyw0t"><!--[-->`;
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let link = each_array[$$index];
-    $$payload.out += `<li><a${attr("href", "/" + link.url)} class="svelte-11tyw0t">${escape_html(link.name)}</a></li>`;
+    $$payload.out += `<li><a${attr("href", base + "/" + link.url)} class="svelte-11tyw0t">${escape_html(link.name)}</a></li>`;
   }
   $$payload.out += `<!--]--></ul></div></nav>`;
 }

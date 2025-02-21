@@ -1,3 +1,7 @@
+<script>
+    import { base } from '$app/paths';
+</script>
+
 <section class="content">
     <h1>AUTHOR TEMPLATE</h1>
     <img 

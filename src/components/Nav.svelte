@@ -1,4 +1,6 @@
 <script>
+  import { base } from '$app/paths';
+
   let scribble = "#FF6B0E";
   $: outerWidth = 0;
   let window;
@@ -14,8 +16,7 @@
     {name: 'Template', url: 'template'},
     {name: 'Author', url: 'author'},
     {name: 'Case study', url: 'casestudy'}
-]
-
+    ]
   // const handleChange = ({ currentTarget }) => {
   //   console.log(currentTarget);
   //   // const { value } = currentTarget;
@@ -45,7 +46,7 @@
     <div >
       <ul class='nav-links'>
         {#each pages as link}
-          <li><a href={'/' + link.url}>{link.name}</a></li>
+          <li><a href={base + '/' + link.url}>{link.name}</a></li>
         {/each}
       </ul>
   </div>

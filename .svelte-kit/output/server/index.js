@@ -1,4 +1,5 @@
-import { b as base, a as assets, o as override, r as reset, p as public_env, s as safe_public_env, B as BROWSER, c as read_implementation, d as options, e as set_private_env, f as prerendering, g as set_public_env, h as get_hooks, i as set_safe_public_env, j as set_read_implementation } from "./chunks/internal.js";
+import { p as public_env, s as safe_public_env, B as BROWSER, r as read_implementation, o as options, a as set_private_env, b as prerendering, c as set_public_env, g as get_hooks, d as set_safe_public_env, e as set_read_implementation } from "./chunks/internal.js";
+import { b as base, a as assets, o as override, r as reset } from "./chunks/paths.js";
 import { m as make_trackable, d as disable_search, w as writable, r as readable, n as normalize_path, a as add_data_suffix, b as resolve, h as has_data_suffix, s as strip_data_suffix, c as decode_pathname, e as decode_params, v as validate_layout_server_exports, f as validate_layout_exports, g as validate_page_server_exports, i as validate_page_exports, j as validate_server_exports } from "./chunks/exports.js";
 import * as devalue from "devalue";
 import { parse, serialize } from "cookie";
