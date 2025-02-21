@@ -527,7 +527,7 @@ p {
 
 h1 {
   font-size: 1.25rem;
-  font-family: 'Laila', Georgia, serif;
+  font-family: 'Times New Roman', Georgia, serif;
   font-weight: 600;
   margin-bottom: 1rem;
 
@@ -541,7 +541,7 @@ h1 {
 }
 
 h1.ban {
-  font-family: 'Laila', Georgia, serif;
+  font-family: 'Times New Roman', Georgia, serif;
 }
 
 /* @media (max-width: 640px) {
@@ -560,7 +560,7 @@ h1.ban {
 
 h2 {
   font-size: 1.5rem;
-  font-family: Laila, Georgia, serif;
+  font-family: 'Times New Roman', Georgia, serif;
   font-weight: 600;
   margin-bottom: 0.5rem;
 
@@ -575,7 +575,7 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  font-family: Laila, Georgia, serif;
+  font-family: 'Times New Roman', Georgia, serif;
   font-weight: 400;
   margin-top: 0rem;
   margin-bottom: 0rem;
@@ -583,7 +583,7 @@ h3 {
 
 h4 {
   font-size: 0.875rem;
-  font-family: Laila, Georgia, serif;
+  font-family: 'Times New Roman', Georgia, serif;
   font-weight: 200;
   font-style: italic;
   margin-top: 1rem;
@@ -1270,4 +1270,42 @@ img {
 .hanging-indent {
   text-indent: -1.5em;
   padding-left: 1.5em;
+}
+
+a.box {
+  display: inline-block; /* Ensures the background covers the link */
+  padding: 10px 20px; /* Adds spacing */
+  border-radius: 8px; /* Optional rounded corners */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
+  background: transparent; /* Default background is transparent */
+  transition: background 0.5s ease-in-out; /* Smooth background transition */
+}
+
+a.box:hover {
+  background: linear-gradient(to right, #8e99cd 25%, #f7bbca 50%, #d3df4e 70%, #be9ac7 90%);
+  background-size: 200% auto;
+  background-position: right center; /* Start position for the gradient on hover */
+  animation: gradientMove 7s ease-in-out infinite alternate;
+  color: white;
+}
+
+/* .name:hover {
+  background: linear-gradient(to right, #11787B 20%, #FF6B0E 30%, #F4A90E 70%, #330105 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  
+  text-decoration: none;
+} */
+
+@keyframes gradientMove {
+  0% {
+    background-position: left center; /* Gradient starts from the left */
+  }
+  100% {
+    background-position: right center; /* Gradient moves to the right */
+  }
 }

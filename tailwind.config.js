@@ -7,11 +7,15 @@ export default {
         '1.5em': '1.5em', // Add a specific value if needed
       },
       colors: {
-        'primary': '#ffbe0b',
+        'primary': '#d3df4e',
         'secondary': '#fb5607',
         'tertiary': '#ff006e',
         'alert': '#ff006e',
-        'visited': '#8338ec'
+        'hover': '#7f3f97',
+        'visittext': '#d3df4e',
+        'visitbox': '#839444',
+        'background': '#4b6aaf',
+        'body': '#d0d2d3'
       }
     },
   },

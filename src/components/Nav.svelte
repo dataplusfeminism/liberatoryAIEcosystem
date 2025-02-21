@@ -31,7 +31,7 @@
 <nav class="flex items-center">
   <div class="flex">
     Liberatory AI Ecosystem
-    <a href={"/."}>
+    <a href={"/."} class='primary'>
       <img
         src="/illustrations/logo.png"
         class="me-3 h-6 sm:h-9 logo"
@@ -46,7 +46,7 @@
     <div >
       <ul class='nav-links'>
         {#each pages as link}
-          <li><a href={base + '/' + link.url}>{link.name}</a></li>
+          <li><a class='box' href={base + '/' + link.url}>{link.name}</a></li>
         {/each}
       </ul>
   </div>
@@ -75,11 +75,10 @@
   .nav-links a {
     text-decoration: none;
     font-size: 1rem;
-    color: #007acc;
     transition: pink 0.8s;
   }
 
-  .nav-links a:hover {
+  /* .nav-links a:hover {
     color: pink;
-  }
+  } */
 </style>
