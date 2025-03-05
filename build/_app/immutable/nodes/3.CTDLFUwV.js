@@ -1,1 +1,0 @@
-import{a as r,t as s}from"../chunks/DICiqEks.js";import"../chunks/CkUQX3MZ.js";import{s as e,h as m}from"../chunks/BQuvKRSg.js";import{s as i}from"../chunks/CHWo3uog.js";import{b as p}from"../chunks/B3NkkuVD.js";var f=s("<h1>About Page</h1> <a>About my site</a>",1);function c(t){var a=f(),o=e(m(a),2);i(o,"href",`${p??""}/about`),r(t,a)}export{c as component};
