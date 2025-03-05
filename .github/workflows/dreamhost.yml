@@ -1,5 +1,5 @@
 on:
-  workflow_dispatch
+  push
 
 jobs:
   ssh-to-dreamhost:
@@ -15,4 +15,4 @@ jobs:
         port: ${{ secrets.PORT }}
         command_timeout: 30m
         script: | 
-          cd /home/dh_mexcz9/liberatoryAIEcosystem && git pull origin main
+          cd ~/liberatoryAIEcosystem && git pull origin main
