@@ -1,8 +1,8 @@
 on:
-  push
+  workflow-dispatch
 
 jobs:
-  run_example_job:
+  ssh-to-dreamhost:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
