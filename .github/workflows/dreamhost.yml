@@ -15,4 +15,4 @@ jobs:
         port: ${{ secrets.PORT }}
         command_timeout: 30m
         script: | 
-          echo "Nice Job!!!"
+          cd /home/dh_mexcz9/liberatoryAIEcosystem && git pull origin main
