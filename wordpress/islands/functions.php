@@ -1,5 +1,6 @@
 <?php
 
+/** Add the CSS that augments the parent theme's CSS */
 add_action( 'wp_enqueue_scripts', 'islands_enqueue_styles' );
 
 function islands_enqueue_styles() {
@@ -15,3 +16,11 @@ function islands_enqueue_styles() {
 	);
 
 }
+
+/** Add any javascript we might need */
+add_action( 'wp_enqueue_scripts', 'islands_add_scripts' );
+
+function islands_add_scripts() {
+    wp_enqueue_script( 'demo-js', get_stylesheet_directory_uri() . '/js/demo.js', array('jquery'), null, true );
+}
+
