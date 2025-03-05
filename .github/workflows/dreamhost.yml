@@ -9,7 +9,7 @@ jobs:
     - name: SSH to Dreamhost
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: ${{ secrets.HOSTNAME }}
+        host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
