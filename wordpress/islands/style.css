@@ -9,4 +9,5 @@
 
  /** proof it works **/
 
- h1 { color: green; }
+ h1 { color: red; }
+ body { color: red;}
