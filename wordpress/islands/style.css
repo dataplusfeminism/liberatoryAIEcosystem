@@ -1,5 +1,5 @@
 /**
- * Theme Name: Islands
+ * Theme Name: Islands vLAIE
  * Template:   twentytwentyfive
  * Description: Liberatory AI theme
  * Authors: Bianchi Dy, Nikko Stevens, Alicia Delgado
@@ -9,5 +9,32 @@
 
  /** proof it works **/
 
- h1 { color: green; }
- body { color: blue;}
+ /** Styles are ordered by alphabet **/
+
+ body { 
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #a8a8a8;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+}
+
+ h1 {
+    font-size: 42pt;
+    line-height: 28.8pt;
+    color: white; 
+}
+
+ h2 {
+    font-size: 36pt;
+ }
+
+ h3{ 
+    font-size: 30pt;
+ }
+
+ p {
+    font-size: 24pt;
+    line-height: 28.8pt;
+ }
