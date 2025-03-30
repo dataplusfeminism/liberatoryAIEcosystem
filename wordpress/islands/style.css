@@ -9,16 +9,58 @@
 
  /** proof it works **/
 
+ /** template styles **/
+
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+ :root {
+    --primary-color: #d3df4e;
+    --secondary-color: #4b6aaf;
+    --visited-color: #839444;
+    --hover-text-color: #7f3f97;
+    --hover-color-1: #8e99cd;
+    --hover-color-2: #f7bbca;
+    --hover-color-3: #d3df4e;
+    --hover-color-4: #be9ac7;
+    --background-color: rgba(75, 106, 175, 0.5);
+    --text-color: #ffffff;
+  }
+
  /** Styles are ordered by alphabet **/
 
+ a {
+    position: relative;
+    display: inline-block; /* Ensures background fits text */
+    transition: background 0.5s ease-in-out, color 0.3s ease; /* Smooth transition for background and text */
+    color: inherit; /* Keeps original text color */
+    text-decoration: none; /* Removes underline */
+  }
+  
+  a:hover {
+    background: linear-gradient(45deg, var(--hover-color-1), var(--hover-color-2), var(--hover-color-3), var(--hover-color-4));
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+    color: var(--hover-text-color) !important; /* Changes text color when hovering */
+    text-decoration: none; /* Removes underline */
+    padding: 1px 2px; /* Adds space around the text */
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
  body { 
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #a8a8a8;
-    opacity: 0.8;
-    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-    background-size: 10px 10px;
+    color: var(--text-color);
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: var(--background-color);
 }
+
+.grit {
+    -webkit-mask-image: url("grit.png");
+    mask-image: url("grit.png");
+  }
 
  h1 {
     font-size: 42pt;
@@ -34,7 +76,56 @@
     font-size: 30pt;
  }
 
- p {
-    font-size: 24pt;
+ .has-small-font-size {
+    font-size: 18pt !important;
     line-height: 28.8pt;
  }
+
+ main {
+    width: 100% !important; /* Default to full width */
+    max-width: 50vw !important; /* Maximum width is half of viewport width */
+    margin-left: auto !important; /* Aligns it to the left with auto expansion */
+    margin-right: auto !important; /* Keeps it centered */
+    padding: 1rem !important; /* Some internal spacing */
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="20" fill="%23d3df4e"/><rect x="2" y="9" width="20" height="6" fill="%23d3df4e"/></svg>') 12 12, auto;
+    /* Apply different styles based on screen width */
+  }
+  
+  /* On small screens (below tablets, e.g., less than 768px), make it full width */
+  @media (max-width: 768px) {
+    main {
+      max-width: 100% !important;/* Make it full width on small screens */
+      margin-left: 0 !important; /* Align fully to the left */
+      margin-right: 0 !important; /* No extra right margin */
+    }
+  }  
+
+ p {
+    font-size: 18pt;
+    line-height: 21.8pt;
+ }
+
+ ul.wp-block-page-list{
+  text-transform: lowercase;
+ }
+
+ .wp-block-template-part {
+  background: linear-gradient(-45deg, #aca6d1, #ef6237, #cccb31);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  color: #9e1f63;
+  font-weight: 700;
+  font-size: 36pt;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
