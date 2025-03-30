@@ -22,7 +22,7 @@
     --hover-color-2: #f7bbca;
     --hover-color-3: #d3df4e;
     --hover-color-4: #be9ac7;
-    --background-color: rgba(75, 106, 175, 0.5);
+    --background-color: rgba(75, 106, 175, 0.4);
     --text-color: #ffffff;
   }
 
@@ -37,18 +37,9 @@
   }
   
   a:hover {
-    background: linear-gradient(45deg, var(--hover-color-1), var(--hover-color-2), var(--hover-color-3), var(--hover-color-4));
-    background-size: 400% 400%;
-    animation: gradientAnimation 3s ease infinite;
     color: var(--hover-text-color) !important; /* Changes text color when hovering */
     text-decoration: none; /* Removes underline */
     padding: 1px 2px; /* Adds space around the text */
-  }
-  
-  @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 
   blockquote {
@@ -58,7 +49,12 @@
  body { 
     color: var(--text-color);
     font-family: 'Libre Franklin', sans-serif;
-    background-color: var(--background-color);
+    /** background-color: var(--background-color);**/
+    background-color: var(--background-color); /* Base background color */
+    background-image: url('images/felt.jpg'); /* Texture overlay */
+    background-size: cover; /* Adjust texture scaling */
+    background-repeat: repeat; /* Ensure texture repeats */
+    background-blend-mode: overlay; /* Blend texture with color */
 }
 
 .grit {
@@ -68,7 +64,7 @@
 
  h1 {
     font-size: 42pt;
-    line-height: 28.8pt;
+    line-height: 32pt;
     color: white; 
 }
 
@@ -91,7 +87,7 @@
     margin-left: auto !important; /* Aligns it to the left with auto expansion */
     margin-right: auto !important; /* Keeps it centered */
     padding: 1rem !important; /* Some internal spacing */
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="20" fill="%23d3df4e"/><rect x="2" y="9" width="20" height="6" fill="%23d3df4e"/></svg>') 12 12, auto;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%23d3df4e"/><rect x="0" y="9" width="50" height="4" fill="%23d3df4e"/></svg>') 12 12, auto;
     /* Apply different styles based on screen width */
   }
   
@@ -104,13 +100,35 @@
     }
   }  
 
+main.wp-block-group {
+  max-width: 70% !important; /* Ensures it spans the full width */
+  margin: 0 !important; /* Removes centering margins */
+  padding: 20px !important; /* Adds minimal padding */
+  text-align: left !important; /* Aligns text/content to the left */
+}
+
+ /* On small screens (below tablets, e.g., less than 768px), make it full width */
+@media (max-width: 768px) {
+  main.wp-block-group {
+    max-width: 100% !important;/* Make it full width on small screens */
+    margin-left: 0 !important; /* Align fully to the left */
+    margin-right: 0 !important; /* No extra right margin */
+    text-align: left !important; /* Aligns text/content to the left */
+  }
+}  
+
  p {
     font-size: 18pt;
     line-height: 21.8pt;
+    font-weight: 400;
  }
 
  ul.wp-block-page-list{
   text-transform: lowercase;
+ }
+
+ .wp-block-group {
+  color: #fffff;
  }
 
  .wp-block-post-title {
@@ -133,6 +151,14 @@
   font-size: 36pt;
   background-color: var(--hover-color-4);
   color: var(--primary-color);
+ }
+
+ .wp-block-template-part a{
+  color:#d3df4e;
+ }
+
+ .wp-block-template-part a:hover{
+  color: #7f3f97;
  }
 
  .wp-block-template-part:hover {
