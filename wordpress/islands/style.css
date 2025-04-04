@@ -57,6 +57,8 @@
     background-size: cover; /* Adjust texture scaling */
     background-repeat: repeat; /* Ensure texture repeats */
     background-blend-mode: overlay; /* Blend texture with color */
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%237f3f97"/><rect x="0" y="9" width="50" height="4" fill="%237f3f97"/></svg>') 12 12, auto;
+    /* Apply different styles based on screen width */
 }
 
 .caption {
@@ -71,7 +73,32 @@
     -webkit-mask-image: url("grit.png");
     mask-image: url("grit.png");
   }
-  
+
+.ffblock-block-frontend {
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--hover-text-color) !important;
+  font-weight: 600;
+}
+
+.ff-el-form-control {
+  background-color: var(--hover-color-4) !important;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+/* Target the placeholder text as well */
+.ff-el-form-control::placeholder {
+  color: var(--hover-text-color) !important;
+}
+
+.ff-el-group button {
+  text-transform: lowercase;
+  background-color: var(--hover-color-4) !important;
+  font-weight: 600 !important;
+  color: var(--hover-text-color) !important;
+  font-size: 22pt !important;
+  border-radius: 50px !important;
+}
 
  h1 {
     font-size: 36pt;
@@ -93,14 +120,19 @@ h2 {
     -2px 0px var(--hover-color-4) /* Extra shadow */
  }
 
+ hr.wp-block-separator.has-alpha-channel-opacity {
+  size: 24px;
+  background-color: var(--text-color);
+  border: 0 none;
+  height: 6px;
+  width: 10%;
+  max-width: 800px; 
+  margin-left:0;
+ }
+
  .has-small-font-size {
     font-size: 14pt !important;
     line-height: 21.8pt;
- }
-
- body {
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%237f3f97"/><rect x="0" y="9" width="50" height="4" fill="%237f3f97"/></svg>') 12 12, auto;
-  /* Apply different styles based on screen width */
  }
 
  main {
@@ -234,10 +266,10 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
  .wp-block-template-part {
   font-weight: 700;
   font-size: 36pt;
-  --x: 50%;
-  --y: 50%;
+  --x: 30%;
+  --y: 30%;
   background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #d3df4e, #ef6237, #8e99cd);
-  transition: background 0.2s ease;
+  transition: background 1s ease;
   color: var(--hover-text-color);
  }
 
@@ -268,7 +300,6 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
 
 /* AUTHOR TAGS */
 .wp-block-group.has-accent-4-color.has-text-color.has-link-color.has-small-font-size.is-layout-flex.wp-container-core-group-is-layout-5.wp-block-group-is-layout-flex {
-  /* Your styles here */
   display: flex;
   flex-direction: column;     /* Stack items vertically */
   align-items: flex-start;    /* Align items to the left */
@@ -284,14 +315,14 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
 
  .wp-block-group.has-accent-4-color.has-text-color.has-link-color.has-small-font-size.is-layout-flex.wp-container-core-group-is-layout-5.wp-block-group-is-layout-flex 
  .wp-block-post-author-name {
-   /* Your styles for the author name go here */
+   /* styles for the author name go here */
   font-weight: 600 !important;
   color: var(--subtitle-color);
  }
 
  .wp-block-group.has-accent-4-color.has-text-color.has-link-color.has-small-font-size.is-layout-flex.wp-container-core-group-is-layout-5.wp-block-group-is-layout-flex 
  .taxonomy-category {
-   /* Your styles for the author name go here */
+   /* styles for the categories */
   color: var(--subtitle-color);
   font-weight: 600 !important;
   font-size: 14pt;
