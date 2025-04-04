@@ -23,10 +23,17 @@
     // Get URL of class for specific targetting
     // Get the current URL
     const url = window.location.href;
+    const specialURL = ["about", 'static-homepage']
 
     // if URL contains "about"
+    if (url.includes("static")) {
+        document.querySelector('.wp-block-post-content').classList.add('special-main');
+        //console.log(document.querySelectorAll('.wp-block-post-content'));
+    }
+
+
     if (url.includes("about")) {
-        document.querySelector('.wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained').classList.add('active-on-about');
+        document.querySelector('.wp-block-post-content').classList.add('special-about');
     }
 
     // // Notes positioning

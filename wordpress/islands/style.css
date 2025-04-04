@@ -17,7 +17,7 @@
     --primary-color: #d3df4e;
     --secondary-color: #4b6aaf;
     --visited-color: #839444;
-    --hover-text-color: #7f3f97;
+    --hover-text-color: #9e1f63;
     --hover-color-1: rgb(188, 196, 234);
     --hover-color-2: #f7bbca;
     --hover-color-3: #d3df4e;
@@ -122,7 +122,7 @@ h2 {
 
  hr.wp-block-separator.has-alpha-channel-opacity {
   size: 24px;
-  background-color: var(--text-color);
+  background-color: var(--hover-text-color);
   border: 0 none;
   height: 6px;
   width: 10%;
@@ -255,6 +255,8 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   justify-content: left !important;
 }
 
+/* Special styles for block posts */
+
  .wp-block-post-title {
   font-weight: 800;
   color: var(--hover-text-color);
@@ -271,6 +273,14 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #d3df4e, #ef6237, #8e99cd);
   transition: background 1s ease;
   color: var(--hover-text-color);
+ }
+
+ .wp-block-post-content.special-main {
+  color: var(--hover-text-color) !important;
+ }
+
+ .wp-block-post-content.special-about {
+  font-style: italic;
  }
 
  .wp-block-template-part p.wp-block-site-title{
