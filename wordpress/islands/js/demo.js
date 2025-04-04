@@ -18,6 +18,48 @@
     element.style.setProperty('--y', `50%`);
     });
     
+    // Get URL of class for specific targetting
+    // Get the current URL
+    const url = window.location.href;
+
+    // if URL contains "about"
+    if (url.includes("about")) {
+        document.querySelector('.wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained').classList.add('active-on-about');
+    }
+
+    // // Notes positioning
+    // window.addEventListener('DOMContentLoaded', () => {
+    //     const anchor = document.getElementById('notes');
+    //     const sidebar = document.querySelector('.sidebar');
+    
+    //     if (anchor && sidebar) {
+    //       const rect = anchor.getBoundingClientRect();
+    //       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    //       sidebar.style.top = `${rect.top + scrollTop}px`; // vertical alignment
+    //       sidebar.style.left = `${rect.left + anchor.offsetWidth + 56}px`; // horizontal position (56px from anchor)
+    //     }
+    
+    const notes = document.querySelectorAll('[id^="notes-"]'); // Select all elements with ID starting with "notes-"
+
+    function positionSidebars() {
+        notes.forEach(note => {
+            const noteId = note.id; // e.g., "notes-1"
+            const sidebar = document.querySelector(`.sidebar-${noteId.split('-')[1]}`); // Match "sidebar-1", "sidebar-2", etc.
+
+            if (sidebar) {
+                const rect = note.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                sidebar.style.position = "absolute"; // Ensure absolute positioning
+                sidebar.style.top = `${rect.top + scrollTop}px`; // Align vertically
+                sidebar.style.left = `${rect.left + note.offsetWidth + 56}px`; // 56px to the right
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', positionSidebars);
+    window.addEventListener('resize', positionSidebars);
 })();
 
   

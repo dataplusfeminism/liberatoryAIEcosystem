@@ -18,13 +18,14 @@
     --secondary-color: #4b6aaf;
     --visited-color: #839444;
     --hover-text-color: #7f3f97;
-    --hover-color-1: #8e99cd;
+    --hover-color-1: rgb(188, 196, 234);
     --hover-color-2: #f7bbca;
     --hover-color-3: #d3df4e;
     --hover-color-4: #be9ac7;
-    --background-color: rgba(75, 106, 175, 0.4);
-    --text-color: #ffffff;
+    --background-color: rgba(188, 196, 234, 0.5);
+    --text-color: #58595B;
     --subtitle-color: #58595B;
+    --base-color: #ffffff;
   }
 
  /** Styles are ordered by alphabet **/
@@ -62,12 +63,15 @@
   font-weight: 700;
   text-align: right;
   text-transform: uppercase;
+  color: var(--base-color);
+  font-size: 14pt;
 }
 
 .grit {
     -webkit-mask-image: url("grit.png");
     mask-image: url("grit.png");
   }
+  
 
  h1 {
     font-size: 36pt;
@@ -75,12 +79,18 @@
     color: white; 
 }
 
- h2 {
-    font-size: 21pt;
+h2 {
+  color: var(--hover-text-color);
+  margin-bottom: 28px;
+  text-shadow: 
+    -4px 0px var(--hover-color-4) /* Extra shadow */
  }
 
  h3{ 
-    font-size: 14pt;
+  color: var(--hover-text-color);
+  margin-bottom: 21px;
+  text-shadow: 
+    -2px 0px var(--hover-color-4) /* Extra shadow */
  }
 
  .has-small-font-size {
@@ -95,7 +105,7 @@
 
  main {
     width: 100% !important; /* Default to full width */
-    max-width: 50vw !important; /* Maximum width is half of viewport width */
+    max-width: 60vw !important; /* Maximum width is half of viewport width */
     margin-left: auto !important; /* Aligns it to the left with auto expansion */
     margin-right: auto !important; /* Keeps it centered */
     padding: 1rem !important; /* Some internal spacing */
@@ -115,7 +125,7 @@ main.wp-block-group {
   margin: 0 !important; /* Removes centering margins */
   padding: 20px !important; /* Adds minimal padding */
   text-align: left !important; /* Aligns text/content to the left */
-  color: #ffffff;
+  color: var(--text-color);
   text-align: justify;
   text-justify: inter-word;
 }
@@ -136,19 +146,38 @@ main.wp-block-group {
     font-weight: 400;
  }
 
-.sidebar {
-  position: absolute;
-  top: 0; /* Aligns it to the top */
-  left: 100%; /* Places it immediately to the right of .prev-block */
-  width: 200px; /* Adjust width as needed */
-  background-color: lightcoral;
-  padding: 20px;
+ .sidebar {
+    position: absolute;
+    top: 0; /* We'll override this with JS or CSS positioning */
+    left: 0;
+    max-width: 250px;
+    /* border-width: 1px;
+    border: lightblue; 
+    border-style: dotted; */
+    padding: 20px;
 }
+
+.sidebar h2.sidebar-title{
+  font-weight: 800 !important;
+  font-size: 18pt;
+}
+
+.sidebar p{
+  font-weight: 600;
+  font-style:italic;
+  font-size: 11pt;
+  line-height: 14pt;
+}
+
+.sidebar p span{
+  background-color: var(--hover-color-4);
+}
+
 
 /* Responsive: Stack on smaller screens */
 @media (max-width: 600px) {
   .sidebar {
-    position: static; /* Reverts to normal flow */
+    position: static;
     width: 100%;
     margin-top: 10px;
   }
@@ -159,7 +188,7 @@ main.wp-block-group {
  }
 
  .wp-block-group {
-  color: #ffffff !important;
+  color: var(--text-color) !important;
  }
 
  p img {
@@ -263,6 +292,22 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
    /* Your styles for the author name go here */
   font-weight: 600;
   color: var(--subtitle-color);
+ }
+
+ /* Target the about page */
+ .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+  /* color: green !important; */
+ }
+
+ .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained p{
+  font-weight: 600 !important;
+  /* font-style: italic; */
+ }
+
+ .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained p a{
+  font-weight: 600 !important;
+  padding: 2px;
+  background-color: var(--hover-color-4);
  }
 
 @keyframes gradient {
