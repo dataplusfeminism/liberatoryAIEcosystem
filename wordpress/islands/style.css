@@ -53,11 +53,11 @@
     font-family: 'Libre Franklin', sans-serif;
     /** background-color: var(--background-color);**/
     background-color: var(--background-color); /* Base background color */
-    background-image: url('images/felt-2.jpg'); /* Texture overlay */
+    background-image: url('images/felt-large.png'); /* Texture overlay */
     background-size: cover; /* Adjust texture scaling */
-    background-repeat: repeat; /* Ensure texture repeats */
+    background-repeat: repeat-y; /* Ensure texture repeats */
     background-blend-mode: overlay; /* Blend texture with color */
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%237f3f97"/><rect x="0" y="9" width="50" height="4" fill="%237f3f97"/></svg>') 12 12, auto;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%239e1f63"/><rect x="0" y="9" width="50" height="4" fill="%239e1f63"/></svg>') 12 12, auto;
     /* Apply different styles based on screen width */
 }
 
@@ -137,7 +137,7 @@ h2 {
 
  main {
     width: 100% !important; /* Default to full width */
-    max-width: 60vw !important; /* Maximum width is half of viewport width */
+    /* max-width: 60vw !important; /* Maximum width is half of viewport width */ 
     margin-left: auto !important; /* Aligns it to the left with auto expansion */
     margin-right: auto !important; /* Keeps it centered */
     padding: 1rem !important; /* Some internal spacing */
@@ -152,7 +152,7 @@ h2 {
     }
   }  
 
-main.wp-block-group {
+wp-block-group {
   max-width: 70% !important; /* Ensures it spans the full width */
   margin: 0 !important; /* Removes centering margins */
   padding: 20px !important; /* Adds minimal padding */
@@ -274,6 +274,15 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   transition: background 1s ease;
   color: var(--hover-text-color);
  }
+
+ @media (max-width: 768px) {
+  .wp-block-template-part {
+    background: linear-gradient(-45deg, #aca6d1, #ef6237, #cccb31);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transition: background 0.5s ease;
+  }
+}  
 
  .wp-block-post-content.special-main {
   color: var(--hover-text-color) !important;
