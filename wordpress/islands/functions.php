@@ -136,3 +136,11 @@ function islands_user_loop_author( $user ) {
 
 	echo '<h2 class="author-name"><a href='. $author_posts_url ."'>" . $display_name . '</a></h2>';
 }
+
+
+// lol why is this not enabled by default...
+function islands_allow_svg_upload($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter( 'upload_mimes', 'islands_allow_svg_upload' );
