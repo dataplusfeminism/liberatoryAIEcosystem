@@ -57,7 +57,6 @@
     background-size: cover; /* Adjust texture scaling */
     background-repeat: repeat-y; /* Ensure texture repeats */
     background-blend-mode: overlay; /* Blend texture with color */
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><rect x="10" y="0" width="4" height="50" fill="%239e1f63"/><rect x="0" y="9" width="50" height="4" fill="%239e1f63"/></svg>') 12 12, auto;
     /* Apply different styles based on screen width */
 }
 
