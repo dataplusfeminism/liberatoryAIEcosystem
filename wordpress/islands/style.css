@@ -264,6 +264,14 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
     -6px 0px var(--hover-color-4) /* Extra shadow */
  }
 
+ /** using some of these same styles for links to other posts  on the single-post page**/
+ .post-navigation-link-previous, .post-navigation-link-next {
+  font-weight: 800;
+  color: var(--hover-text-color);
+  text-shadow: 
+    -1px 0px var(--hover-color-4) /* Extra shadow */
+ }
+
  .wp-block-template-part {
   font-weight: 700;
   font-size: 36pt;
