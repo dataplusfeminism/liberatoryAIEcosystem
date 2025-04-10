@@ -151,14 +151,8 @@ h2 {
     }
   }  
 
-wp-block-group {
-  max-width: 70% !important; /* Ensures it spans the full width */
-  margin: 0 !important; /* Removes centering margins */
-  padding: 20px !important; /* Adds minimal padding */
-  text-align: left !important; /* Aligns text/content to the left */
-  color: var(--text-color);
-  text-align: justify;
-  text-justify: inter-word;
+.wp-block-group {
+  max-width: 100% !important; /* Ensures it spans the full width */
 }
 
  /* On small screens (below tablets, e.g., less than 768px), make it full width */
@@ -259,7 +253,6 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
  .wp-block-post-title {
   font-weight: 800;
   color: var(--hover-text-color);
-  margin-bottom: 48px;
   text-shadow: 
     -3px 0px var(--hover-color-4) /* Extra shadow */
  }
@@ -280,6 +273,7 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #d3df4e, #ef6237, #8e99cd);
   transition: background 1s ease;
   color: var(--hover-text-color);
+  max-width: 100% !important;
  }
 
  @media (max-width: 768px) {
