@@ -381,3 +381,21 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
 		background-position: 0% 50%;
 	}
 }
+
+/** contributor list **/
+
+
+
+
+.contrib-description .avatar  {
+  float: left;
+  margin: 0 1em 1em 0; /* Top, Right, Bottom, Left */
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+}
+
+.author-block::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -37,22 +37,25 @@ global $user;
 	 *
 	 * @hooked sul_template_loop_author_name - 10
 	 */
-	//do_action('islands_user_loop_author', $user);
 	do_action( 'sul_user_loop_author_title', $user );
 
 	/**
 	 * Hook: sul_after_user_loop_author_title.
 	 */
 	do_action( 'sul_after_user_loop_author_title', $user );
+?>
+<div class = "contrib-description">
+	<?php
 
-	/**
-	 * Hook: sul_after_user_loop_author.
-	 *
-	 * @hooked sul_template_loop_author_link_close - 5
-	 * @hooked sul_template_loop_author_description - 10
-	 */
-	do_action( 'sul_after_user_loop_author', $user );
+		/**
+		 * Hook: sul_after_user_loop_author.
+		 *
+		 * @hooked sul_template_loop_author_link_close - 5
+		 * @hooked sul_template_loop_author_description - 10
+		 */
+		do_action( 'sul_after_user_loop_author', $user );
 
-	?>
+		?>
+</div>
 
 </div>

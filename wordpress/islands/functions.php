@@ -85,8 +85,37 @@ add_action( 'sul_before_user_loop_author_title', 'islands_remove_sul_avatar', 5)
 function islands_remove_sul_avatar() {
 	// removing wp-content/plugins/simple-user-listing/includes/simple-user-listing-template-hooks.php
 	remove_action( 'sul_before_user_loop_author_title', 'sul_template_loop_author_avatar' );
+}
+// And removing the description block so that it can include the AVATAR
+add_action( 'sul_after_user_loop_author', 'islands_remove_sul_description', 5);
+function islands_remove_sul_description() {
+	// removing wp-content/plugins/simple-user-listing/includes/simple-user-listing-template-hooks.php
+	remove_action( 'sul_after_user_loop_author',        'sul_template_loop_author_description' );
 
 }
+
+// going to ADD this one to do the description and avatar 
+add_action( 'sul_after_user_loop_author', 'islands_user_description', 5);
+function islands_user_description( $user ) {
+	$description = get_user_meta( $user->ID, 'description', true );
+
+	$size = apply_filters( 'sul_author_avatar_size', 200, '', 'Headshot', array('class' => 'author-headshot') );
+	echo get_avatar( $user->ID, $size );
+
+	if ( $description ) {
+		echo '<p class="author-desc">' . wp_kses_post( $description ) . '</p>';
+	}
+
+	$author_posts_url = get_author_posts_url($user->ID);
+	echo '<p class="see-all-posts"><a href='. $author_posts_url ."'>" . __('See all posts >>') . '</a></p>';
+
+	//<img src="your-image.jpg" alt="Descriptive Alt Text" class="float-img" />
+
+}
+
+
+
+
 
 
 // Format the Username 
