@@ -31,3 +31,20 @@ This feature has two steps:
 </div>
 ```
 
+## Formatting the Authors page
+
+<img width="1471" alt="image" src="https://github.com/user-attachments/assets/df9b6d2d-7761-43a0-97db-952eb825a719" />
+
+This uses the builtin Wordpress **Team Section**.
+
+## Formatting the Contact Us Page
+
+<img width="1334" alt="image" src="https://github.com/user-attachments/assets/deade0a0-2bc4-4b4d-8be9-6d78f2878237" />
+
+This uses the plug-in **Fluent Forms** (free version)
+
+<img width="678" alt="image" src="https://github.com/user-attachments/assets/7045041a-d842-4f55-ad38-fc2e508ff512" />
+
+
+
+
