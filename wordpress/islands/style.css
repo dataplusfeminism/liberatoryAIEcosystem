@@ -40,8 +40,8 @@
   
   a:hover {
     color: var(--hover-text-color) !important; /* Changes text color when hovering */
-    text-decoration: none; /* Removes underline */
-    padding: 1px 2px; /* Adds space around the text */
+    text-shadow: 
+    -2px 0px var(--hover-color-4) /* Extra shadow */
   }
 
   blockquote {
@@ -109,7 +109,7 @@ h2 {
   color: var(--hover-text-color);
   margin-bottom: 28px;
   text-shadow: 
-    -4px 0px var(--hover-color-4) /* Extra shadow */
+    -2px 0px var(--hover-color-4) /* Extra shadow */
  }
 
  h3{ 
@@ -261,7 +261,7 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   color: var(--hover-text-color);
   margin-bottom: 48px;
   text-shadow: 
-    -6px 0px var(--hover-color-4) /* Extra shadow */
+    -3px 0px var(--hover-color-4) /* Extra shadow */
  }
 
  /** using some of these same styles for links to other posts  on the single-post page**/
