@@ -151,7 +151,7 @@ h2 {
     }
   }  
 
-.wp-block-group {
+wp-block-group {
   max-width: 100% !important; /* Ensures it spans the full width */
 }
 
