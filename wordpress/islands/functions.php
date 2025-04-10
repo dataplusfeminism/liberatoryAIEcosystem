@@ -80,6 +80,14 @@ function islands_remove_sul_author_format() {
 	remove_action( 'sul_user_loop_author_title', 'sul_template_loop_author_name');
 }
 
+// removing the avatar until we can get formatting correct
+add_action( 'sul_before_user_loop_author_title', 'islands_remove_sul_avatar', 5);
+function islands_remove_sul_avatar() {
+	// removing wp-content/plugins/simple-user-listing/includes/simple-user-listing-template-hooks.php
+	remove_action( 'sul_before_user_loop_author_title', 'sul_template_loop_author_avatar' );
+
+}
+
 
 // Format the Username 
 add_action( 'sul_user_loop_author_title', 'islands_user_loop_author', 10);
