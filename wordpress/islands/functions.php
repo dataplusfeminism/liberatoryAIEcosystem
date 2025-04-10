@@ -65,3 +65,37 @@ function islands_post_link( $output, $format, $link, $post, $adjacent )
 
 	return $output;
 }
+
+
+// ~~~~~~~~~~~ Doing a little simple user listing cleanup ~~~~~~~~~~~~~~~~~~~~~~//
+// this removes the search. We can add it back here, if we want to. 
+add_action( 'simple_user_listing_before_loop', 'islands_remove_sul_search', 5 );
+function islands_remove_sul_search() {
+   remove_action( 'simple_user_listing_before_loop',   'sul_template_user_search' );
+}
+
+add_action( 'sul_user_loop_author_title', 'islands_remove_sul_author_format', 5);
+function islands_remove_sul_author_format() {
+	// removing wp-content/plugins/simple-user-listing/includes/simple-user-listing-template-hooks.php
+	remove_action( 'sul_user_loop_author_title', 'sul_template_loop_author_name');
+}
+
+
+// Format the Username 
+add_action( 'sul_user_loop_author_title', 'islands_user_loop_author', 10);
+function islands_user_loop_author( $user ) {
+	// post count
+	$num_posts = count_user_posts( $user->ID );
+	// user info
+	$user_info = get_userdata( $user->ID );
+	$display_name = esc_html( $user_info->display_name );
+
+	//i don't think we need number of posts.
+	// if ( $num_posts > 0 ) {
+	// 	$display_name .= ' <span class="post-count"><span class="hyphen">-</span>' . sprintf( _nx( '1 post', '%s posts', $num_posts, 'number of posts', 'simple-user-listing' ), $num_posts ) . '</span>';
+	// }
+
+	$author_posts_url = get_author_posts_url($user->ID);
+
+	echo '<h2 class="author-name"><a href='. $author_posts_url ."'>" . $display_name . '</a></h2>';
+}
