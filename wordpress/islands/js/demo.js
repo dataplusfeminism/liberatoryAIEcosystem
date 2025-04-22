@@ -1,18 +1,34 @@
 (function() {
     // alert('javascript loaded.');
     
-    // changing A.I. tagline
-    // get every place the tagline is used
+    // changing A.I. tagline on load
     const allTags = document.getElementsByClassName("wp-block-site-tagline");
     phrase = getPhrase();
     // replace it in each location.   
     for (const one of allTags) {
-     // one.text(phrase);
       one.innerHTML = phrase;
     }
   
-    
+    // setting timer to refresh tagline on interval
+  setInterval(changeAIText, 2500);
   
+
+// this function controls changing the text 
+function changeAIText() {
+  for (const one of allTags) {
+    one.classList.add('hide');
+  setTimeout(function () {
+      one.innerHTML = getPhrase();
+      one.classList.remove('hide');
+  }, 800);
+}
+}
+
+
+
+
+
+
     
     // Nav gradient cursor
     const elements = document.querySelectorAll('.wp-block-template-part');
@@ -97,3 +113,5 @@ function getPhrase() {
  return a + " " + i;
 }
   
+
+
