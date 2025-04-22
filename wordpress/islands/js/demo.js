@@ -87,8 +87,8 @@
 
 // load the As and the Is and
 function getPhrase() {
-  const awords = ['allied', 'assembled', 'analog', 'amorphous ', 'antiquated (?)', 'any kind of (?)', 'ancient', 'adorable', 'adversarial', 'ancestral', 'ambivalent', 'abrasive', 'actualized', 'adaptive', 'anchored', 'abolition?'];
- const iwords = ['interdependence', 'interconnectedness', 'infrastructures', 'intelligences', 'intersections', 'imaginations', 'interrelations', 'intuitions', 'iterations', 'insights', 'inquisitiveness', 'inclusion'];
+  const awords = ['Allied', 'Assembled', 'Analog', 'Amorphous', 'Antiquated', 'Any kind of', 'Ancient', 'Adorable', 'Adversarial', 'Ancestral', 'Ambivalent', 'Abrasive', 'Actualized', 'Adaptive', 'Anchored', 'Abolitionist'];
+ const iwords = ['Interdependence', 'Interconnectedness', 'Infrastructures', 'Intelligences', 'Intersections', 'Imaginations', 'Interrelations', 'Intuitions', 'Iterations', 'Insights', 'Inquisitiveness', 'Inclusion'];
 
  // get a,i word
  var a = awords[ Math.floor(Math.random() * awords.length) ];
