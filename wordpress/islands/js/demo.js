@@ -1,5 +1,19 @@
 (function() {
     // alert('javascript loaded.');
+    
+    // changing A.I. tagline
+    // get every place the tagline is used
+    const allTags = document.getElementsByClassName("wp-block-site-tagline");
+    phrase = getPhrase();
+    // replace it in each location.   
+    for (const one of allTags) {
+     // one.text(phrase);
+      one.innerHTML = phrase;
+    }
+  
+    
+  
+    
     // Nav gradient cursor
     const elements = document.querySelectorAll('.wp-block-template-part');
 
@@ -71,4 +85,15 @@
     window.addEventListener('resize', positionSidebars);
 })();
 
+// load the As and the Is and
+function getPhrase() {
+  const awords = ['allied', 'assembled', 'analog', 'amorphous ', 'antiquated (?)', 'any kind of (?)', 'ancient', 'adorable', 'adversarial', 'ancestral', 'ambivalent', 'abrasive', 'actualized', 'adaptive', 'anchored', 'abolition?'];
+ const iwords = ['interdependence', 'interconnectedness', 'infrastructures', 'intelligences', 'intersections', 'imaginations', 'interrelations', 'intuitions', 'iterations', 'insights', 'inquisitiveness', 'inclusion'];
+
+ // get a,i word
+ var a = awords[ Math.floor(Math.random() * awords.length) ];
+ var i = iwords[ Math.floor(Math.random() * iwords.length) ];
+
+ return a + " " + i;
+}
   
