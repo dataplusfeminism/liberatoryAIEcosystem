@@ -22,6 +22,7 @@
     --hover-color-2: #f7bbca;
     --hover-color-3: #d3df4e;
     --hover-color-4: #be9ac7;
+    --text-shadow-color: #be9ac76b;
     --background-color: rgba(188, 196, 234, 0.5);
     --text-color: #58595B;
     --subtitle-color: #58595B;
@@ -102,14 +103,12 @@
  h1 {
     font-size: 36pt;
     line-height: 32pt;
-    color: white; 
+    color: var(--secondary-color); 
 }
 
 h2 {
   color: var(--hover-text-color);
-  margin-bottom: 28px;
-  text-shadow: 
-    -2px 0px var(--hover-color-4) /* Extra shadow */
+
  }
 
  h3{ 
@@ -166,8 +165,8 @@ wp-block-group {
 }  
 
  p {
-    font-size: 14pt;
-    line-height: 16.8pt;
+    font-size: 16pt;
+    line-height: 20pt;
     font-weight: 400;
  }
 
@@ -221,32 +220,9 @@ wp-block-group {
   height: 100% !important;
  }
 
- /* Team member cards */
- div[id*="tsbMember"] {
-  background-color: var(--hover-color-4) !important;
- }
 
- div[id*="tsbMember"] .memberDetails {
-  display: flex !important;
-  flex-direction: column !important;     /* Stack items vertically */
-  align-items: flex-start !important;    /* Align items to the left */
- }
 
- /* Inner elements of team member cards */
- div[id*="tsbMember"] h4 {
-  /* Styles for h4 inside tsbMember divs */
-  color: var(--hover-text-color) !important;
-  font-size: 26pt !important;
-  font-weight: 800 !important;
-}
 
-div[id*="tsbMember"]  .memberDetails .memberBio {
- text-align: left;
-}
-
-div[id*="tsbMember"]  .memberDetails .memberSocial {
-  justify-content: left !important;
-}
 
 /* Special styles for block posts */
 
@@ -254,16 +230,11 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   font-weight: 800;
   color: var(--hover-text-color);
   text-shadow: 
-    -3px 0px var(--hover-color-4) /* Extra shadow */
+    -6px 3px var(--text-shadow-color) /* Extra shadow */
  }
 
  /** using some of these same styles for links to other posts  on the single-post page**/
- .post-navigation-link-previous, .post-navigation-link-next {
-  font-weight: 800;
-  color: var(--hover-text-color);
-  text-shadow: 
-    -1px 0px var(--hover-color-4) /* Extra shadow */
- }
+
 
  .wp-block-template-part {
   font-weight: 700;
@@ -304,6 +275,7 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
 
  .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content {
   color: var(--primary-color);
+  font-variant-caps: all-small-caps;
  }
 
  .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:hover {
@@ -349,12 +321,7 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
  }
 
 
- /* Target the about page */
 
- .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained p{
-  font-weight: 600 !important;
-  /* font-style: italic; */
- }
 
  /** targets links in posts and 'read more' links on archive pages **/
  .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained p a,
@@ -392,4 +359,14 @@ div[id*="tsbMember"]  .memberDetails .memberSocial {
   content: "";
   display: table;
   clear: both;
+}
+
+
+/*** Addition of A and I words in header and footer **/
+.wp-block-site-tagline {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.hide {
+  opacity: 0 !important;
 }
