@@ -103,8 +103,10 @@ function changeAIText() {
 
 // load the As and the Is and
 function getPhrase() {
-  const awords = ['Allied', 'Assembled', 'Analog', 'Amorphous', 'Antiquated', 'Any kind of', 'Ancient', 'Adorable', 'Adversarial', 'Ancestral', 'Ambivalent', 'Abrasive', 'Actualized', 'Adaptive', 'Anchored', 'Abolitionist'];
- const iwords = ['Interdependence', 'Interconnectedness', 'Infrastructures', 'Intelligences', 'Intersections', 'Imaginations', 'Interrelations', 'Intuitions', 'Iterations', 'Insights', 'Inquisitiveness', 'Inclusion'];
+  const awords = ['Able', 'Abolitionist ', 'Abrasive', 'Absolute', 'Abundant', 'Active', 'Actualized', 'Adaptive', 'Adorable', 'Advantageous', 'Adversarial', 'Affiliated', 'Afloat', 'Agreeable', 'Allied', 'Amalgmated', 'Ambivalent', 'Amorphous', 'Ample', 'Amplified', 'Analog', 'Ancestral', 'Anchored', 'Ancient', 'Antiquated', 'Any kind of', 'Apodictic', 'Applicable', 'Applied', 'Apposite', 'Apropos', 'Apt', 'Assembled', 'Auspicious', 'Authentic'];
+
+ const iwords = ['Idealisms', 'Ideographs', 'Ideologies', 'Illusions', 'Images', 'Imaginations', 'Immersions', 'Importance', 'Incantations', 'Inclusion', 'Incrementalness', 'Information', 'Infrastructures', 'Inquisitiveness', 'Insights', 'Insubordination', 'Intelligences', 'Intercommunalism', 'Interconnectedness', 'Interdependence', 'Interjections', 'Interlocutors', 'Intermediaries', 'Interpellations', 'Interpretations', 'Interregnums', 'Interrelations', 'Interrogations', 'Intersections', 'Intertwining', 'Interventions', 'Interweaving', 'Intuitions', 'Iterations'];
+
 
  // get a,i word
  var a = awords[ Math.floor(Math.random() * awords.length) ];
