@@ -275,7 +275,7 @@ wp-block-group {
 
  .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content {
   color: var(--primary-color);
-  font-variant-caps: all-small-caps;
+
  }
 
  .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:hover {
