@@ -223,9 +223,9 @@ wp-block-group {
 
 
 
-/* Special styles for block posts */
+/* Special styles for block posts when the are H1s, or H2s, and also for all H2s.  */
 
- .wp-block-post-title {
+ h1.wp-block-post-title, h2.wp-block-post-title, h1 {
   font-weight: 800;
   color: var(--hover-text-color);
   text-shadow: 
