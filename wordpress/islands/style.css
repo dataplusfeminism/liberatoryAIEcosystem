@@ -169,14 +169,15 @@ wp-block-group {
     line-height: 20pt;
  }
 
+ /***** _> we don't have a SIDEBAR.
  .sidebar {
     position: absolute;
-    top: 0; /* We'll override this with JS or CSS positioning */
+    top: 0; /* We'll override this with JS or CSS positioning 
     left: 0;
     max-width: 250px;
     /* border-width: 1px;
     border: lightblue; 
-    border-style: dotted; */
+    border-style: dotted; 
     padding: 20px;
 }
 
@@ -194,7 +195,7 @@ wp-block-group {
 
 .sidebar p span{
   background-color: var(--hover-color-4);
-}
+} */
 
 
 /* Responsive: Stack on smaller screens */
@@ -323,11 +324,26 @@ wp-block-group {
 
 
  /** targets links in posts and 'read more' links on archive pages **/
+
  .wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained p a,
  .wp-block-post-excerpt__more-link {
   font-weight: 600 !important;
   padding: 2px;
   background-color: var(--hover-color-4);
+ }
+ /** also targets the taxonomy pills to remove the shaky hover **/
+ .taxonomy-post_tag a {
+  font-weight: 500 !important;
+  padding: 2px;
+  background-color: var(--text-shadow-color);
+  border-radius: 7px;
+  border-width: 0.5px;
+  line-height: 1.5;
+ }
+
+ .taxonomy-post_tag a:hover {
+  text-decoration: none;
+  text-shadow: none;
  }
 
 @keyframes gradient {
