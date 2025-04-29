@@ -137,6 +137,11 @@ h2 {
     line-height: 21.8pt;
  }
 
+ html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
  main {
     width: 100% !important; /* Default to full width */
     /* max-width: 60vw !important; /* Maximum width is half of viewport width */ 
