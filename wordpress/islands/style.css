@@ -250,7 +250,9 @@ wp-block-group {
   font-size: 36pt;
   --x: 30%;
   --y: 30%;
-  background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #d3df4e, #ef6237, #8e99cd);
+ /* background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #d3df4e, #ef6237, #8e99cd); */
+   background: radial-gradient(circle at var(--x) var(--y), #be9ac7, #8e99cd); 
+
   transition: background 1s ease;
   color: var(--hover-text-color);
   max-width: 100% !important;
@@ -269,9 +271,7 @@ wp-block-group {
   color: var(--hover-text-color) !important;
  }
 
- .wp-block-post-content.special-about {
-  font-style: italic;
- }
+
 
  .wp-block-template-part p.wp-block-site-title{
   color: var(--hover-text-color);
