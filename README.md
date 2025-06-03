@@ -1,11 +1,15 @@
 # Documentation
+## ✨[NEW] SVG and Interactivity✨
+There is a file inside `wordpress` folder called `svg-code.html` that you can copy paste into an `HTML block` on the front page.
+
+Inside `demo.js` there is code that prototypes how to add event listeners to the individual groups. In the next iteration I will come up with a list-style algorithm to go through assigning event listeners.
+
 ## How to add captions
 <img width="667" alt="image" src="https://github.com/user-attachments/assets/38b8d449-7ad7-41e0-b4a9-d9feb2ad72bd" />
 
 ```html 
   <div class='caption'>Caption Text, 2025</div>
 ```
-
 
 ## How to add notes as a sidebar in WP
 <img width="667" alt="image" src="https://github.com/user-attachments/assets/44f0518d-c2c1-4532-b756-cbedf52e369d" />
@@ -44,6 +48,8 @@ This uses the builtin Wordpress **Team Section**.
 This uses the plug-in **Fluent Forms** (free version)
 
 <img width="678" alt="image" src="https://github.com/user-attachments/assets/7045041a-d842-4f55-ad38-fc2e508ff512" />
+
+
 
 
 
