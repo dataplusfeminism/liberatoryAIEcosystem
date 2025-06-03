@@ -23,12 +23,6 @@ function changeAIText() {
   }, 800);
 }
 }
-
-
-
-
-
-
     
     // Nav gradient cursor
     const elements = document.querySelectorAll('.wp-block-template-part');
@@ -99,6 +93,67 @@ function changeAIText() {
 
     window.addEventListener('DOMContentLoaded', positionSidebars);
     window.addEventListener('resize', positionSidebars);
+
+    // This function tests out the SVG interactivity
+  document.addEventListener("DOMContentLoaded", function () {
+    const circle = document.getElementById("circle1");
+    const rect = document.getElementById("rect1");
+    const hoverText = document.getElementById("hover-text");
+
+    // Function to show tooltip
+    function showText(text, event) {
+      hoverText.textContent = text;
+      hoverText.style.opacity = 1;
+
+      // Move tooltip near mouse
+      const container = document.getElementById("svg-container");
+      const rect = container.getBoundingClientRect();
+      hoverText.style.left = (event.clientX - rect.left + 10) + "px";
+      hoverText.style.top = (event.clientY - rect.top + 10) + "px";
+    }
+
+    // Function to hide tooltip
+    function hideText() {
+      hoverText.style.opacity = 0;
+    }
+
+    circle.addEventListener("mouseenter", (e) =>
+      showText("Corporate AI is nowhere", e)
+    );
+    circle.addEventListener("mousemove", (e) =>
+      showText("Corporate AI is nowhere", e)
+    );
+    circle.addEventListener("mouseleave", hideText);
+
+    rect.addEventListener("mouseenter", (e) =>
+      showText("AI can work in harmony with the environment", e)
+    );
+    rect.addEventListener("mousemove", (e) =>
+      showText("AI can work in harmony with the environment", e)
+    );
+    rect.addEventListener("mouseleave", hideText);
+
+     // EChange color on click
+    circle.addEventListener("click", () => {
+      circle.setAttribute("opacity", 0.5);
+    });
+
+    // Animate movement
+    rect.addEventListener("click", () => {
+      let x = 100;
+      const interval = setInterval(() => {
+        x += 2;
+        rect.setAttribute("x", x);
+        if (x > 200) clearInterval(interval);
+      }, 30);
+    });
+
+    // Example: Hide/show group
+    group1.addEventListener("dblclick", () => {
+      const visibility = group1.getAttribute("visibility") === "hidden" ? "visible" : "hidden";
+      group1.setAttribute("visibility", visibility);
+    });
+  });
 })();
 
 // load the As and the Is and
