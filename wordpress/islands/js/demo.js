@@ -98,6 +98,8 @@ function changeAIText() {
   document.addEventListener("DOMContentLoaded", function () {
     const circle = document.getElementById("circle1");
     const rect = document.getElementById("rect1");
+    const islandgrp2 = document.getElementById("island-group-2");
+    const islandgrp1 = document.getElementById("island-group-1");
     const hoverText = document.getElementById("hover-text");
 
     // Function to show tooltip
@@ -112,6 +114,30 @@ function changeAIText() {
       hoverText.style.top = (event.clientY - rect.top + 10) + "px";
     }
 
+    function showTextAtGroupCenter(groupId, text) {
+      const group = document.getElementById(groupId);
+      const bbox = group.getBBox(); // SVG coordinates
+      const svgRect = svg.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+
+      // Calculate center of group in SVG space
+      const centerX = bbox.x + bbox.width / 2;
+      const centerY = bbox.y + bbox.height / 2;
+
+      // Convert SVG center to container-relative position
+      const xPercent = centerX / svg.viewBox.baseVal.width;
+      const yPercent = centerY / svg.viewBox.baseVal.height;
+
+      const containerX = xPercent * svgRect.width;
+      const containerY = yPercent * svgRect.height;
+
+      hoverText.textContent = text;
+      hoverText.style.left = containerX + "px";
+      hoverText.style.top = containerY + "px";
+      hoverText.style.opacity = 1;
+    }
+
+
     // Function to hide tooltip
     function hideText() {
       hoverText.style.opacity = 0;
@@ -120,6 +146,7 @@ function changeAIText() {
     circle.addEventListener("mouseenter", (e) =>
       showText("Corporate AI is nowhere", e)
     );
+
     circle.addEventListener("mousemove", (e) =>
       showText("Corporate AI is nowhere", e)
     );
@@ -133,10 +160,50 @@ function changeAIText() {
     );
     rect.addEventListener("mouseleave", hideText);
 
+    let text = ["Corporate AI is nowhere", "AI can work in harmony with the environment"];
+    let objects = [islandgrp1, islandgrp2];
+
+    for (let i in text) {
+      console.log(i, text[i]);
+      objects[i].addEventListener("mouseenter", (e) =>
+        showText(text[i], e)
+      );
+
+      objects[i].addEventListener("mousemove", (e) =>
+        showText(text[i], e)
+      );
+
+      objects[i].addEventListener("mouseleave", hideText);
+    }
+
      // EChange color on click
     circle.addEventListener("click", () => {
       circle.setAttribute("opacity", 0.5);
     });
+    
+    // Change opacity on mouseenter
+    islandgrp1.addEventListener("mouseenter", () => {
+      islandgrp2.setAttribute("opacity", 0.2);
+      islandgrp1.setAttribute("opacity", 1);
+    });
+
+      // Change opacity on mouseenter
+    islandgrp2.addEventListener("mouseenter", () => {
+      islandgrp1.setAttribute("opacity", 0.2);
+      islandgrp2.setAttribute("opacity", 1);
+    });
+
+
+    islandgrp1.addEventListener("mouseleave", () => {
+      islandgrp2.setAttribute("opacity", 1);
+      islandgrp1.setAttribute("opacity", 1);
+    });
+
+    islandgrp2.addEventListener("mouseleave", () => {
+      islandgrp2.setAttribute("opacity", 1);
+      islandgrp1.setAttribute("opacity", 1);
+    });
+
 
     // Animate movement
     rect.addEventListener("click", () => {
